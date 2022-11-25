@@ -1,17 +1,33 @@
 const { Recipe, Diet } = require("../db.js");
 
-const addRecipe = async (req, res) => {
+const addRecipe = async (
+  name,
+  summary,
+  healthScore,
+  steps,
+  createdInDB,
+  diets
+) => {
   try {
-    const { name, summary, healthScore, steps } = req.body;
     const newRecipe = await Recipe.create({
       name,
       summary,
       healthScore,
       steps,
+      createdInDB,
     });
-    res.status(201).send(newRecipe);
+    if (diets) {
+      const dbDiets = await Diet.findAll({
+        where: {
+          name: diets,
+        },
+      });
+      await newRecipe.addDiet(dbDiets);
+    }
+
+    return newRecipe;
   } catch (error) {
-    res.status(400).send(error.message);
+    console.log(error);
   }
 };
 
