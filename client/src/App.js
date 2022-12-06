@@ -1,17 +1,24 @@
-import "./App.css";
-import Nav from "./components/nav/Nav";
-import Home from "./components/home/Home";
-import Landing from "./components/landing/Landing";
-import CreateRecipe from "./components/createRecipe/CreateRecipe";
-import { Route } from "react-router-dom";
+import './App.css';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Landing from './dumb/landing/Landing';
+import Home from './dumb/home/Home';
+import Detail from './components/detail/Detail'
+import CreateRecipe from './components/createRecipe/CreateRecipe';
+import Error from './dumb/error404/Error'; 
+
+
 
 function App() {
   return (
     <div className="App">
-      <Route path="/" component={Nav} />
-      <Route path="/home" component={Home} />
-      <Route exact path="/" component={Landing} />
-      <Route path="/newrecipe" component={CreateRecipe} />
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/recipe" component={CreateRecipe} />
+        <Route exact path="/recipes/:id" component={Detail} />
+        <Route path={'*'} component={Error} />
+      </Switch>
     </div>
   );
 }

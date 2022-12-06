@@ -1,0 +1,171 @@
+ .filters{
+ display: flex;
+ flex-direction: row;
+justify-content: center;
+ align-items: center;
+ }
+
+
+/* .select{
+    
+}  */
+
+body{
+    background-color:#F0E1B9;
+}
+
+.big_container{
+    margin: 0;
+    padding: 0;
+    background-color:#F0E1B9;
+    min-height: 100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI';
+}
+
+.recipes_container{
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.face{
+width: 400px;
+height: 300px;
+overflow: hidden;
+transition: .4s;
+}
+
+.face1{
+    position: relative;
+    background: #918053;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 1;
+    transform: translateY(100px);
+    border-radius: 50px;
+}
+
+.face2{
+    background: #918053;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; 
+    box-sizing: border-box;
+    transform: translateY(-100px);
+    border-radius: 40px;
+}
+
+.face3{
+    background: #918053;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; 
+    box-sizing: border-box;
+    transform: translateY(-100px);
+    border-radius: 40px;
+    height: auto;
+}
+
+.card:hover .face.face1{
+    transform: translateY(0);
+    box-shadow: inset 0 0 60px whitesmoke,
+    inset 20px 0 60px #333,
+    inset -20px 0 60px #918053,
+    inset 20px 0 300px #333,
+    inset -20px 0 300px #918053,
+    0 0 50px #918053,
+    -10px 0 60px #333,
+    10px 0 60px #918053;
+    border-radius: 50px;
+
+}
+
+.outer{
+opacity: .5;
+text-align: center;
+transition: 0.5s;
+}
+
+.inner{
+opacity: 1;
+display: flexbox;
+align-items: center;
+justify-content: space-between;
+}
+
+.card:hover .outer{
+    opacity: 10;
+}
+
+.card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.card:hover .face.face3{
+    transform: translateY(0);
+}
+
+.img{
+    width: 400px;
+    height: 300px;
+    border-radius: 50px;
+}
+
+.name {
+    color: beige;
+    width: 300px;
+    font-size: 25px;
+    position: relative;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px #584A3C;
+}
+
+.name2{
+    color: beige;
+    width: 300px;
+    font-size: 25px;
+    position: relative;
+    margin-top: 60px;
+    text-shadow: 2px 2px 4px #584A3C;
+}
+
+.p{
+    font-size: 12pt;
+    margin-top: 10px;
+    padding: 9px;
+    color: #333;
+}
+
+.diet{
+    font-size: 8pt;
+    margin: 0;
+    color: #333;
+    margin-bottom: 14px;
+}
+
+
+.option{
+    background: beige;
+}
+
+.select{
+    background: #918053;
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin-top: 2em;
+    margin-right: 1em;
+}
+
+.select:hover {
+    background-color: beige;
+    color: #111111;
+  }

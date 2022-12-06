@@ -1,0 +1,130 @@
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+   
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    margin: 1.5em;
+  }
+  
+  
+  .img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+   
+  }
+  
+  
+  .image{
+    margin-top: 3em;
+    width: 50%;
+    height: 50%;
+    border-radius: 25px;
+  }
+  
+  .title {
+    color: #584A3C;
+    width: 700px;
+    font-size: 3em;
+    position: relative;
+    margin-top: 2em;
+text-shadow: 2px 2px 20px white;
+  }
+  
+  .dietContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    padding: 0 450px;
+    margin-bottom: 2em;
+   font-style: italic;
+  }
+
+  .scoreContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 50px;
+    border-radius: 50%;
+    background: #584A3C;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0 0.5em;
+  } 
+
+ .health{
+  width:30px;
+  margin-left: 0.25em;
+ }
+  
+  .text{
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 10px;
+    margin-left: 12em;
+    margin-right: 12em;
+    text-align: center;
+    margin-top: 0.50em;
+  }
+  
+.p{
+  color: #584A3C;
+  width: 700px;
+  font-weight: 500;
+  font-size: 1.2em;
+  position: relative;
+  text-shadow: 2px 2px 20px white;
+  margin: auto;
+}
+
+
+
+
+  .button {
+    padding: 11px 22px;
+    font-size: 13px;
+    position: relative;
+    background: transparent;
+    color: #333;
+    text-transform: uppercase;
+    border: 1.5px solid #333;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius: 100px;
+    margin-top: 3em;
+ margin-bottom: 3em;
+}
+
+.button:hover {
+    color: beige;
+    border: none;
+    font-weight:500;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #333;
+    background: #584A3C;
+}

@@ -1,0 +1,98 @@
+
+
+/* body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background: #1a1a1a;
+} */
+
+.container{
+    padding-top: 5.7em;
+}
+
+.button {
+    padding: 20px 40px;
+    font-size: 20px;
+    position: relative;
+    background: transparent;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.7s;
+    overflow: hidden;
+    border-radius: 100px;
+}
+
+.button:hover {
+    color: #1a1a1a
+}
+
+span {
+    transition: all 0.7s;
+    z-index: -1;
+}
+
+.button .left {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background: #e7e393;
+}
+
+.button:hover .left {
+    top: 0;
+    right: 0;
+ }
+
+.button .top {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: -100%;
+    height: 100%;
+    width: 25%;
+    background: #DD7230;
+}
+
+.button:hover .top{
+   top: 0;
+   left: 50%;
+}
+
+.button .bottom{
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    top: 100%;
+    width: 25%;
+    background: #F4C95D; 
+}
+
+.button:hover .bottom{
+    top: 0;
+    left: 25%;
+ }
+
+ .button .right{
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 25%;
+    background: #4f5d2f;
+ }
+
+ .button:hover .right{
+    top: 0;
+    left: 0;
+ }
+
+ 

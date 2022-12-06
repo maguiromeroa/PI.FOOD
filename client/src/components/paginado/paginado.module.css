@@ -1,0 +1,75 @@
+.paginado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buttonContainer{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button{
+    border: 1px solid #333;
+    border-radius: 1em;
+    padding: 0.25em 1em;
+    background: transparent;
+}
+
+.button:active{
+    background-color: #584A3C;
+    border: none;
+}
+
+.current{
+    border: none;
+    border-radius: 1em;
+    padding: 0.38em 1.1em;
+    color: white;
+    background-color: #584A3C;
+    
+}
+
+
+.button:hover{
+    border: none;
+    background: beige;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #333;
+}
+
+.prev{
+    border: none;
+    border-radius: 1em;
+    padding: 0.38em 1em;
+    background: #584A3C;
+    color: antiquewhite;
+}
+
+.prev:hover{
+    border: 1px solid #584A3C;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #333;
+    background: #584A3C;
+}
+
+.next{
+    border: none;
+    border-radius: 1em;
+    padding: 0.38em 1em;
+    background: #584A3C;
+    color: antiquewhite;
+}
+
+
+.next:hover{
+    border: 2px solid #584A3C;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #333;
+}
