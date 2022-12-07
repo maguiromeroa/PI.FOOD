@@ -18,7 +18,7 @@ const Search = () => {
     setInput("");
   };
   return (
-    <form className={search.search} onSubmit={(event) => handleSubmit(event)}>
+    <form className={search.search} onSubmit={handleSubmit}>
       <input
         className={search.input}
         type="text"

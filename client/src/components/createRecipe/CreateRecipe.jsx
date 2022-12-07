@@ -17,6 +17,7 @@ const CreateRecipe = () => {
   const [form, setForm] = useState({
     name: "",
     healthScore: "",
+    image: "",
     diets: [],
     summary: "",
     steps: "",
@@ -25,6 +26,7 @@ const CreateRecipe = () => {
   const [errors, setErrors] = useState({
     name: "",
     healthScore: "",
+    image: "",
     diets: [],
     summary: "",
     steps: "",
@@ -59,6 +61,7 @@ const CreateRecipe = () => {
       setForm({
         name: "",
         healthScore: "",
+        image: "",
         diets: [],
         summary: "",
         steps: "",
@@ -97,7 +100,7 @@ const CreateRecipe = () => {
           <div className={style.scoreContainer}>
             <label className={style.name}>Health Score</label>
             <input
-              className={style.score}
+              className={errors.healthScore ? style.scoreError : style.score}
               type="number"
               name="healthScore"
               value={form.healthScore}
@@ -108,12 +111,29 @@ const CreateRecipe = () => {
               pattern="[0-9]+"
               required
             />
+            {errors.healthScore && (
+              <p className={style.error}>{errors.healthScore}</p>
+            )}
           </div>
           <br />
 
-          <>
+          <div className={style.urlContainer}>
+            <label className={style.url}>URL</label>
+            <input
+              className={style.urlInput}
+              type={"url"}
+              name={"image"}
+              value={form.image}
+              onChange={handleChange}
+              placeholder=" recipe's image"
+            ></input>
+          
+          </div>
+
+          
             <label className={style.name}>Types of diet</label>
-          </>
+            {errors.diets && <p className={style.error}>{errors.diets}</p>}
+          
 
           <div className={style.dietsContainer}>
             <div className={style.start}>
@@ -149,8 +169,8 @@ const CreateRecipe = () => {
                 </div>
               ))}
             </div>
-            {errors.diets && <p className={style.error}>{errors.diets}</p>}
           </div>
+
           <br />
 
           <div className={style.summaryContainer}>

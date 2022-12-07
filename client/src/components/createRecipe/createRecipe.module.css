@@ -15,13 +15,14 @@
  .form {
     background: #918053;
     padding: 10em;
-    height: 820px;
+    height: 870px;
     border-radius: 20px;
     border-left: 1px solid rgba(255,255,255,0.3);
     border-top: 1px solid rgba(255,255,255,0.3);
     backdrop-filter: blur(6px);
     box-shadow: 20px 20px 40px -6px #221B16;
     text-align: center; 
+    margin-top: 8em;
   }
 
  .tittle {
@@ -183,6 +184,7 @@
   .scoreContainer{
 display: flex;
 flex-direction: row;
+margin-bottom: -1.3em
   }
 
   .summaryContainer{
@@ -207,7 +209,7 @@ flex-direction: row;
     font-weight: 400;
     color: #111111;
     width: 200px;
-    box-shadow: 1px 1px 25px 4px red;
+    box-shadow: 1px 1px 20px 1px red;
     margin-top: 0.5em;
     margin-bottom: 1em;
     margin-right: 2em;
@@ -224,12 +226,74 @@ flex-direction: row;
     border:none;
     color: #111111;
     margin-top: 0.5em;
-    box-shadow: 1px 1px 25px 4px red;
+    box-shadow: 1px 1px 20px 1px red;
   }
 
   .error{
-    margin-top: 0.7em;
+    margin: auto;
     color: red;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
   }
+
+  .scoreError{
+    background: transparent;
+    width: 100px;
+    padding: 1em;
+    transition: transform 250ms ease-in-out;
+    line-height: 10px;
+    border-radius: 50px;
+    border: 1px solid #333;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    color: #111111;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    box-shadow: 1px 1px 20px 1px red;
+  }
+
+  .url{
+    font-weight: 350;
+    color: #111111;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 4px #2C231C;
+    padding-right: 2em;
+  }
+
+.urlInput{
+ 
+    background: transparent;
+    width: 200px;
+    padding: 0.8em;
+    transition: transform 250ms ease-in-out;
+      line-height: 10px;
+      border-radius: 50px;
+      border: 1px solid #333;
+      transition: all 250ms ease-in-out;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      color: #111111;
+      margin-top: 0.5em;
+      margin-bottom: 2em;
+      margin-right: 2em;
+  }
+  .urlInput::placeholder {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #111111;
+      font-size: 12px;
+  }
+  
+  .urlInput:hover,
+  .urlInput:focus {
+      padding: 10px 10px;
+      outline: 0;
+      border: 1px solid transparent;
+      border-radius: 50px;
+      background-position: 100% center;
+      background-color: #9F8D59;
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+      color: #111111;
+  }
+

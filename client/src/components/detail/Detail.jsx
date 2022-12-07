@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { recipeDetail, clearDetail } from "../../redux/actions";
 import { useParams } from "react-router-dom";
 import detailStyle from "./detail.module.css";
-import Loading from "../../dumb/loading/Loading";
 import { Link } from "react-router-dom";
 import NavBar from "../../dumb/navBar/NavBar";
 import health from "../../img/health.png";

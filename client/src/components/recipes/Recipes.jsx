@@ -18,11 +18,11 @@ const Recipes = () => {
   const dispatch = useDispatch();
 
   const recipes = useSelector((state) => state.recipes);
-  const currentPage = useSelector((state) => state.currentPage); // 1
-  const recipesPerPage = useSelector((state) => state.recipesPerPage); // 9
+  const currentPage = useSelector((state) => state.currentPage); 
+  const recipesPerPage = useSelector((state) => state.recipesPerPage); 
 
-  const indexOfLastRecipe = currentPage * recipesPerPage; // 1 * 9 = 9
-  const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage; // 9 - 9 = 0
+  const indexOfLastRecipe = currentPage * recipesPerPage; 
+  const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage; 
   const currentRecipes = recipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
 
   useEffect(() => {
@@ -77,8 +77,14 @@ const Recipes = () => {
         </select>
       </div>
 
+
+
+
+
+
       <div className={desings.big_container}>
         <div className={desings.recipes_container}>
+
           {recipes.length === 0 && <Loading />}
 
           {currentRecipes.map((recipe) => {

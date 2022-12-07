@@ -20,17 +20,19 @@ const Paginado = () => {
   };
 
   return(
+
     <div className={styles.paginado}>
         <div className={styles.buttonContainer}>
-{pageNumbers && currentPage > 1 ? <button className={styles.prev} value="Prev" onClick= {handlerChange}>Prev</button> : null}
 
-{pageNumbers?.map(number=>( <button key={number} className={currentPage === number ? styles.current : styles.button} value={number} onClick={handlerChange}>{number}</button>))}
+      {pageNumbers && currentPage > 1 ? <button className={styles.prev} value="Prev" onClick= {handlerChange}>Prev</button> : null}
+
+      {pageNumbers?.map(number=>( <button key={number} className={currentPage === number ? styles.current : styles.button} value={number} onClick={handlerChange}>{number}</button>))}
     
-{pageNumbers && currentPage < pageNumbers.length ? <button className={styles.next} value='Next' onClick={handlerChange}>Next</button> : null}
+      {pageNumbers && currentPage < pageNumbers.length ? <button className={styles.next} value='Next' onClick={handlerChange}>Next</button> : null}
+    
     </div>
     </div>
   )
 };
 
-// console.log(Paginado());
 export default Paginado
