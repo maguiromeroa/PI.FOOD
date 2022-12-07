@@ -9,6 +9,7 @@ recipesRouter.get( "/", async (req, res) => {
     try {
       const { name } = req.query;
       const allRecipes = await getAllRecipes();
+      
 
       if (name) {
         const recipesByName = allRecipes.filter((recipe) =>
@@ -45,15 +46,16 @@ recipesRouter.get("/:id", async (req, res) => {
 
 recipesRouter.post("/", async (req, res) => {
   try {
-    const { name, summary, healthScore, steps, createdInDB, diets } = req.body;
+    const { name, summary, healthScore, image, steps, createdInDB, diets } = req.body;
 
-    if (!name || !summary || name.length < 3 || summary.length < 3) {
-      res.status(400).send({ error: "Name and/or summary required" });
+    if (!name || !summary || name.length < 3 || summary.length < 10 || diets.length < 1) {
+      res.status(400).send({ error: "Name, Summary and/or Diets fields might be missing. All field are required" });
     }
     const newRecipe = await addRecipe(
       name,
       summary,
       healthScore,
+      image, 
       steps,
     createdInDB,
       diets

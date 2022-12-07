@@ -23,15 +23,20 @@ module.exports = (sequelize) => {
       },
       healthScore: {
         type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      image: {
+        type: DataTypes.STRING
       },
       steps: {
         type: DataTypes.TEXT,
+        allowNull:false
       },
-      createdInDB: {
+      createdInDB:{
         type: DataTypes.BOOLEAN,
-        allowNull: false,
-        defaultValue: true,
-      },
+        allowNull : false,
+        defaultValue : true,
+      }
     },
     { timestamps: false }
   );

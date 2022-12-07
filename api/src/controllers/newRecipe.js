@@ -1,9 +1,12 @@
 const { Recipe, Diet } = require("../db.js");
 
+
+
 const addRecipe = async (
   name,
   summary,
   healthScore,
+  image,
   steps,
   createdInDB,
   diets
@@ -13,6 +16,7 @@ const addRecipe = async (
       name,
       summary,
       healthScore,
+      image, 
       steps,
       createdInDB,
     });
