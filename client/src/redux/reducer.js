@@ -4,7 +4,7 @@ import {
   CLEAR_DETAIL,
   GET_DIETS,
   RECIPE_NAME,
-  CREATE_RECIPE,
+  CREATE_RECIPE, 
 } from "./actions";
 import {
   FILTER_BY_DIET,
@@ -16,6 +16,7 @@ import {
 const initialState = {
   diets: [],
   recipes: [],
+  allRecipes : [],
   detail: {},
   createdRecipe: [],
 
@@ -26,7 +27,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_RECIPES:
-      return { ...state, recipes: action.payload, currentPage: 1 };
+      return { ...state, recipes: action.payload, allRecipes: action.payload,  };
 
     case GET_DETAIL:
       return { ...state, detail: action.payload };
@@ -41,7 +42,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         recipes: action.payload,
-        // detail: state.detail,
+        allrecipes : state.allRecipes, 
         currentPage: 1,
       };
 
@@ -55,7 +56,8 @@ const reducer = (state = initialState, action) => {
 
       
     case FILTER_BY_DIET:
-      const filterDiet = state.recipes.filter((recipe) =>
+      const allRecipes = state.allRecipes
+      const filterDiet = action.payload === "all" ? allRecipes : allRecipes.filter((recipe) =>
         recipe.diets.find((diet) => diet.name === action.payload)
       );
       return {
@@ -110,6 +112,8 @@ const reducer = (state = initialState, action) => {
           : 
           parseInt(state.currentPage) - 1,
       };
+      
+      
 
     default:
       return { ...state };

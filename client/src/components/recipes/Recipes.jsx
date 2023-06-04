@@ -55,8 +55,8 @@ const Recipes = () => {
     <>
       <div className={desings.filters}>
         <Reset />
-        <select className={desings.select} onChange={handlerDiets}>
-          <option className={desings.option}>Choose a diet</option>
+        <select className={desings.select} onChange={handlerDiets}> 
+          <option className={desings.option} value="all">All diets</option>
           {diets?.map((diet) => (
             <option key={diet} value={diet}>
               {diet}
@@ -136,8 +136,8 @@ const Recipes = () => {
                     >
                       {recipe.name}
                     </h1>
-                  </div>{" "}
-                </div>{" "}
+                  </div>
+                </div>
               </div>
             );
           })}

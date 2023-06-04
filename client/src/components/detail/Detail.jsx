@@ -31,31 +31,29 @@ const Detail = () => {
 
         <div className={detailStyle.img}>
           {recipe.image ? (
-            <img className={detailStyle.image} src={recipe.image}  alt={recipe.name} />
+            <img
+              className={detailStyle.image}
+              src={recipe.image}
+              alt={recipe.name}
+            />
           ) : null}
         </div>
 
         <div className={detailStyle.info}>
-
           <div className={detailStyle.scoreContainer}>
             <p className={detailStyle.score}>{recipe.healthScore}</p>
             <img className={detailStyle.health} src={health} alt="health" />
           </div>
-       
         </div>
 
-<div className={detailStyle.dietContainer}>
-        {recipe.diets
-          ? recipe.diets.map((diet) => (
-              <p>{diet.name}</p>
-            ))
-          : null}
-          </div>
+        <div className={detailStyle.dietContainer}>
+          {recipe.diets ? recipe.diets.map((diet) => <p>{diet.name}</p>) : null}
+        </div>
 
-        
-          <p className={detailStyle.p}>Summary:</p>
-          <p className={detailStyle.text}>{recipe.summary ? recipe.summary.replace(/<[^>]+>/g, "") : null}
-          </p>
+        <p className={detailStyle.p}>Summary:</p>
+        <p className={detailStyle.text}>
+          {recipe.summary ? recipe.summary.replace(/<[^>]+>/g, "") : null}
+        </p>
 
         <p className={detailStyle.p}>Steps:</p>
         <p className={detailStyle.text}>{recipe.steps}</p>

@@ -96,3 +96,20 @@ span {
  }
 
  
+ @media screen and (max-width: 600px) {
+   .button{
+    padding: 10px 20px;
+    font-size: 15px;
+    position: relative;
+    background: transparent;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.7s;
+    overflow: hidden;
+    border-radius: 50px;
+    }
+    .container{
+        padding-top: 10em;
+    }
+}

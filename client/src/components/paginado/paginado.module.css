@@ -73,3 +73,16 @@
     transform: scale(1.05);
     box-shadow: 0 0 10px #333;
 }
+
+
+
+  @media screen and (max-width: 600px) {
+    .paginado, .buttonContainer {
+      float: none;
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }}
+   

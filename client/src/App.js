@@ -6,7 +6,9 @@ import Home from './dumb/home/Home';
 import Detail from './components/detail/Detail'
 import CreateRecipe from './components/createRecipe/CreateRecipe';
 import Error from './dumb/error404/Error'; 
+import axios from 'axios';
 
+axios.defaults.baseURL = 'http://localhost:3001'
 
 
 function App() {
