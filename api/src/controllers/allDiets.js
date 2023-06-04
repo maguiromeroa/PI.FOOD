@@ -14,8 +14,8 @@ const getAllDiets = async () => {
     const dietsEach = dietsArrays.flat();
     const diets = [...new Set(dietsEach)];
     
-    diets.forEach((diet) => {
-      Diet.findOrCreate({
+   diets.forEach( async (diet) => {
+      await Diet.findOrCreate({
         where: {
           name: diet,
         },
