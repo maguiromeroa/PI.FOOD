@@ -8,7 +8,7 @@ import CreateRecipe from './components/createRecipe/CreateRecipe';
 import Error from './dumb/error404/Error'; 
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:3001'
+axios.defaults.baseURL = 'https://pifood-production-2a9f.up.railway.app/'
 
 
 function App() {
